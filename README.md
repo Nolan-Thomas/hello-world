@@ -3,7 +3,7 @@ description
 
 ```mermaid
 flowchart TB
-    subgraph UNTRUSTED["Untrusted"]
+    subgraph UNTRUSTED["Untrusted<br/>&nbsp;"]
         direction TB
         SA[Service agent]
         MG[Manager]
@@ -14,7 +14,7 @@ flowchart TB
         MG -- "HTTPS / JWT" --> UI
     end
 
-    subgraph TRUSTED["Trusted"]
+    subgraph TRUSTED["Trusted<br/>&nbsp;"]
         direction TB
         API["Spring Boot API<br/><i>deny-by-default</i><br/><i>validates JWT + roles</i>"]
         PG[(PostgreSQL)]
@@ -27,4 +27,6 @@ flowchart TB
     UI --> API
     IDP -.->|tokens| API
 
+    style UNTRUSTED fill:transparent,stroke:#999,stroke-dasharray: 5 5
+    style TRUSTED fill:transparent,stroke:#999,stroke-dasharray: 5 5
 ```

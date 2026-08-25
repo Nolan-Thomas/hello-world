@@ -27,6 +27,4 @@ flowchart TB
     UI --> API
     IDP -.->|tokens| API
 
-    style UNTRUSTED fill:transparent,stroke:#999,stroke-dasharray: 5 5
-    style TRUSTED fill:transparent,stroke:#999,stroke-dasharray: 5 5
 ```
